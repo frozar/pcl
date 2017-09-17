@@ -29,6 +29,7 @@ addons:
       - libopenni-dev
 before_install:
   - bash .travis.sh before-install
+group: deprecated-2017Q3
 
 env:
   global:
