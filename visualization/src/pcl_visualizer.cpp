@@ -156,7 +156,7 @@ pcl::visualization::PCLVisualizer::PCLVisualizer (const std::string &name, const
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-pcl::visualization::PCLVisualizer::PCLVisualizer (int &argc, char **argv, const std::string &name, PCLVisualizerInteractorStyle* style, const bool create_interactor)
+pcl::visualization::PCLVisualizer::PCLVisualizer (const int & argc, const char *const *const & argv, const std::string &name, PCLVisualizerInteractorStyle* style, const bool create_interactor)
   : interactor_ ()
   , update_fps_ (vtkSmartPointer<FPSCallback>::New ())
 #if !((VTK_MAJOR_VERSION == 5) && (VTK_MINOR_VERSION <= 4))
@@ -435,7 +435,7 @@ void pcl::visualization::PCLVisualizer::setDefaultWindowSizeAndPos ()
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-void pcl::visualization::PCLVisualizer::setupCamera (int &argc, char **argv)
+void pcl::visualization::PCLVisualizer::setupCamera (const int & argc, const char *const *const & argv)
 {
   initCameraParameters ();
 
@@ -2326,7 +2326,7 @@ pcl::visualization::PCLVisualizer::resetCameraViewpoint (const std::string &id)
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 bool
-pcl::visualization::PCLVisualizer::getCameraParameters (int argc, char **argv)
+pcl::visualization::PCLVisualizer::getCameraParameters (const int & argc, const char *const *const & argv)
 {
   for (int i = 1; i < argc; i++)
   {
@@ -4770,7 +4770,7 @@ pcl::visualization::PCLVisualizer::textureFromTexMaterial (const pcl::TexMateria
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 std::string
-pcl::visualization::PCLVisualizer::getUniqueCameraFile (int argc, char **argv)
+pcl::visualization::PCLVisualizer::getUniqueCameraFile (const int & argc, const char *const *const & argv)
 {
   std::vector<int> p_file_indices;
   boost::uuids::detail::sha1 sha1;

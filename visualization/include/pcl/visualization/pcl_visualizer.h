@@ -111,7 +111,7 @@ namespace pcl
           * \param[in] style interactor style (defaults to PCLVisualizerInteractorStyle)
           * \param[in] create_interactor if true (default), create an interactor, false otherwise
           */
-        PCLVisualizer (int &argc, char **argv, const std::string &name = "",
+        PCLVisualizer (const int & argc, const char *const *const & argv, const std::string &name = "",
             PCLVisualizerInteractorStyle* style = PCLVisualizerInteractorStyle::New (), const bool create_interactor = true);
             
         /** \brief PCL Visualizer constructor.
@@ -1754,7 +1754,7 @@ namespace pcl
           * \param[in] argv
           */
         bool
-        getCameraParameters (int argc, char **argv);
+        getCameraParameters (const int & argc, const char *const *const & argv);
 
         /** \brief Load camera parameters from a camera parameters file.
           * \param[in] file the name of the camera parameters file
@@ -2009,7 +2009,7 @@ namespace pcl
          * \param[in] argc
          * \param[in] argv
          */
-        void setupCamera (int &argc, char **argv);
+        void setupCamera (const int & argc, const char *const *const & argv);
 
         struct PCL_EXPORTS ExitMainLoopTimerCallback : public vtkCommand
         {
@@ -2315,7 +2315,7 @@ namespace pcl
           * \return empty string if failed.
           */
         std::string
-        getUniqueCameraFile (int argc, char **argv);
+        getUniqueCameraFile (const int & argc, const char *const *const & argv);
         
         //There's no reason these conversion functions shouldn't be public and static so others can use them.
       public:
