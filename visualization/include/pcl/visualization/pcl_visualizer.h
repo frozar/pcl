@@ -129,7 +129,7 @@ namespace pcl
           * \param[in] style interactor style (defaults to PCLVisualizerInteractorStyle)
           * \param[in] create_interactor if true (default), create an interactor, false otherwise
           */
-        PCLVisualizer (int &argc, char **argv, vtkSmartPointer<vtkRenderer> ren, vtkSmartPointer<vtkRenderWindow> wind, const std::string &name = "",
+        PCLVisualizer (const int & argc, const char *const *const & argv, vtkSmartPointer<vtkRenderer> ren, vtkSmartPointer<vtkRenderWindow> wind, const std::string &name = "",
                        PCLVisualizerInteractorStyle* style = PCLVisualizerInteractorStyle::New (),
                        const bool create_interactor = true);
 

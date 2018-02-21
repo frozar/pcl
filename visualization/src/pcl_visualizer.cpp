@@ -222,7 +222,7 @@ pcl::visualization::PCLVisualizer::PCLVisualizer (vtkSmartPointer<vtkRenderer> r
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
-pcl::visualization::PCLVisualizer::PCLVisualizer (int &argc, char **argv, vtkSmartPointer<vtkRenderer> ren, vtkSmartPointer<vtkRenderWindow> wind,
+pcl::visualization::PCLVisualizer::PCLVisualizer (const int & argc, const char *const *const & argv, vtkSmartPointer<vtkRenderer> ren, vtkSmartPointer<vtkRenderWindow> wind,
                                                   const std::string &name, PCLVisualizerInteractorStyle* style, const bool create_interactor)
   : interactor_ ()
   , update_fps_ (vtkSmartPointer<FPSCallback>::New ())
